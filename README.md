@@ -1,2 +1,1 @@
-# Friendly-Parakeet_PW
-Friendly Parakeet Password Generator
+# Password Generator Starter Code
