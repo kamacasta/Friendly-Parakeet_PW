@@ -1,6 +1,10 @@
-// Assignment code here
+// Generator functions - http://www.net-comber.com/charset.html
 
+function getRandomLower(){
+ return String.fromCharCode(97);
+}
 
+console.log(Math.floor(Math.random()*26) + 97)
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
