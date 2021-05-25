@@ -21,7 +21,7 @@ function getPasswordOptions() {
         return alert("Password must be a number!")
     }
     // if statement to ensure the correct amount of numbers entered
-    if (length < 8 || length > 128 ){
+    if (length < 8 || length > 128) {
         return alert("Password must contain atleast 8 charaters, and a max of 128 characters!")
     }
     // confirming which characters user would like in password
@@ -29,7 +29,7 @@ function getPasswordOptions() {
     var hasLower = confirm("Would you like Lowercase characters in your password?");
     var hasNumeric = confirm("Would you like Numeric characters in your password?");
     var hasSpecial = confirm("Would you like Special (symbols) characters in your password?");
-    
+
     // if statement to make sure if user selected none of the options an alert would appear
     if (hasCapital === false && hasLower === false && hasNumeric === false && hasSpecial === false) {
         return alert("Must choose one of the following for valid password!")
@@ -45,12 +45,14 @@ function getPasswordOptions() {
 
     return options;
 }
-    // generates password based on users selected options
-function generatePassword(){
+// generates password based on users selected options
+function generatePassword() {
     var givenOptions = getPasswordOptions();
+    // empty string for password is currently blank
     var password = "";
+    // will contain options user selected
     var passwordDomain = "";
-
+    // selected characters will be added to passwordDomain to create a string with given options user selected
     if (givenOptions["hasCapital"]) {
         passwordDomain = passwordDomain + capital;
     }
@@ -66,15 +68,15 @@ function generatePassword(){
     if (givenOptions["hasSpecial"]) {
         passwordDomain = passwordDomain + special;
     }
-
+    // for loop creating random password
     for (var i = 0; i < givenOptions["length"]; i++) {
         var passwordCharIndex = Math.floor(Math.random() * passwordDomain.length);
         password = password + passwordDomain[passwordCharIndex];
         console.log(i);
     }
-
+    // returns password created by the random generator!
     return password;
-    
+
 }
 // Add event listener to generate button
- generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
