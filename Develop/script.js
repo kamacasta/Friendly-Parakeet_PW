@@ -20,19 +20,21 @@ function getPasswordOptions() {
     if (isNaN(length) === true) {
         return alert("Password must be a number!")
     }
-// if statement to ensure the correct amount of numbers entered
+    // if statement to ensure the correct amount of numbers entered
     if (length < 8 || length > 128 ){
         return alert("Password must contain atleast 8 charaters, and a max of 128 characters!")
     }
+    // confirming which characters user would like in password
     var hasCapital = confirm("Would you like Uppercase characters in your password?");
     var hasLower = confirm("Would you like Lowercase characters in your password?");
     var hasNumeric = confirm("Would you like Numeric characters in your password?");
     var hasSpecial = confirm("Would you like Special (symbols) characters in your password?");
-
+    
+    // if statement to make sure if user selected none of the options an alert would appear
     if (hasCapital === false && hasLower === false && hasNumeric === false && hasSpecial === false) {
         return alert("Must choose one of the following for valid password!")
     }
-
+    // variable library
     var options = {
         length: length,
         hasCapital: hasCapital,
@@ -43,7 +45,7 @@ function getPasswordOptions() {
 
     return options;
 }
-
+    // generates password based on users selected options
 function generatePassword(){
     var givenOptions = getPasswordOptions();
     var password = "";
