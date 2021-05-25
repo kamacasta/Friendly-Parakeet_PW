@@ -1,10 +1,10 @@
-// variables for customizing password 
+// assigned character strings into variables
 var capital = "ABCDEFGHIJKLMNOPQURSTUVWXYZ";
 var lower = "abcdefghijklmnopqrstuvwxyz";
 var numeric = "1234567890";
 var special = "!@#$%^&*()_+-=[]{},./?";
 
-// 
+// Constants
 const generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
