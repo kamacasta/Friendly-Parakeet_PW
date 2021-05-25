@@ -1,6 +1,6 @@
 # Password Generator Starter Code
 
-[For deployed version, click me ]()
+[For deployed version, click me ](https://kamacasta.github.io/Friendly-Parakeet_PW/)
 
 I created a password generator using JavaScript the front end code was already set up for me!
 
