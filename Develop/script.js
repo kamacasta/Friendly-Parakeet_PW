@@ -14,13 +14,13 @@ function writePassword() {
 
     passwordText.value = password;
 }
-//
+// if statement to ensure number was entered 
 function getPasswordOptions() {
     var length = prompt("How many characters would you like in your password, passwod needs to be 8-128 characters!");
     if (isNaN(length) === true) {
         return alert("Password must be a number!")
     }
-
+// if statement to ensure the correct amount of numbers entered
     if (length < 8 || length > 128 ){
         return alert("Password must contain atleast 8 charaters, and a max of 128 characters!")
     }
